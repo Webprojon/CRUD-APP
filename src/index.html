@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Font & Icon Link -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+			integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<!-- CSS File -->
+		<link rel="stylesheet" href="./index.css" />
+		<title>CRUD App</title>
+	</head>
+	<body>
+		<div class="background">
+			<img
+				src="https://bytegrad.com/course-assets/js/2/pattern.svg"
+				alt="Background pattern"
+				class="background__pattern"
+			/>
+		</div>
+
+		<div class="container">
+			<header class="header">
+				<div class="header__logo">
+					<i class="fa-solid fa-list-check logo__icon"></i>
+					<h1 class="logo__text">Tasks List</h1>
+				</div>
+				<select class="filter__priority">
+					<option value="All priority">All priority</option>
+					<option value="High priority">High priority</option>
+					<option value="Middle priority">Middle priority</option>
+					<option value="Low priority">Low priority</option>
+				</select>
+			</header>
+
+			<div class="container__tasks">
+				<table class="task__table">
+					<thead class="table__row-h">
+						<tr>
+							<th>Team Member</th>
+							<th>Tasks</th>
+							<th>Priority</th>
+							<th>Actions</th>
+							<th>Date</th>
+						</tr>
+					</thead>
+
+					<tbody class="table__tbody">
+						<div class="spinner spinner__tasks"></div>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="footer">
+				<div class="container__inputs">
+					<input
+						type="text"
+						placeholder="Your name"
+						autocomplete="off"
+						class="name__input task-input"
+					/>
+					<input
+						type="text"
+						placeholder="Enter your task"
+						autocomplete="off"
+						class="task__input task-input"
+					/>
+					<select class="select__priority">
+						<option value="High priority">High priority</option>
+						<option value="Middle priority">Middle priority</option>
+						<option value="Low priority">Low priority</option>
+					</select>
+				</div>
+
+				<div class="footer__buttons">
+					<button class="btn footer__btn-cancel">Cancel</button>
+					<button class="btn footer__btn-add">add task</button>
+				</div>
+			</div>
+			<div class="footer__info">
+				<div class="footer__texts">
+					<p>Built by Tokhirjon ❤️</p>
+					<p><span class="active__tasks-length"></span> Active tasks</p>
+				</div>
+			</div>
+
+			<div class="modal__bg-overlay"></div>
+
+			<div class="modal__task">
+				<div class="modal-inputs">
+					<div class="wrapper">
+						<input
+							type="text"
+							placeholder="Your name"
+							autocomplete="off"
+							class="modal__input-name modal-task-input"
+						/>
+						<select class="modal__select-priority">
+							<option value="High priority">High priority</option>
+							<option value="Middle priority">Middle priority</option>
+							<option value="Low priority">Low priority</option>
+						</select>
+					</div>
+
+					<input
+						type="text"
+						placeholder="Enter your task"
+						autocomplete="off"
+						class="modal__input-task modal-task-input"
+					/>
+				</div>
+
+				<div class="modal__btns">
+					<button class="modal__cancel-btn modal__btn">Cancel</button>
+					<button class="modal__update-btn modal__btn">Update</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- JS File -->
+		<script src="./index.js" defer type="module"></script>
+	</body>
+</html>
