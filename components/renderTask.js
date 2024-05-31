@@ -2,7 +2,7 @@ import {
 	state,
 	BASE_API_URL,
 	taskTableBodyEl,
-	filterPriorityEL,
+	filterPriorityEl,
 	activeTasksLength,
 	createMarkupOfTask,
 } from "../common.js";
@@ -11,7 +11,7 @@ import renderSpinner from "./renderSpinner.js";
 // VARIABLES
 let FILTEREDTASKS;
 
-filterPriorityEL.addEventListener("change", (event) => {
+filterPriorityEl.addEventListener("change", (event) => {
 	state.priorityValue = event.target.value;
 });
 

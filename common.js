@@ -5,13 +5,13 @@ export const BASE_API_URL = "https://mydailytasks.vercel.app";
 export const state = {
 	tasksList: [],
 	taskId: 0,
-	priorityValue: "",
+	priorityValue: "All priority",
 };
 
 // SELECTORS
 export const containerTasks = document.querySelector(".container__tasks");
 export const taskTableBodyEl = document.querySelector(".table__tbody");
-export const containerInputsEl = document.querySelector(".container__inputs");
+export const containerInputsEl = document.querySelector(".footer__inputs");
 export const inputs = document.querySelectorAll(".task-input");
 export const nameInputEl = document.querySelector(".name__input");
 export const taskInputEl = document.querySelector(".task__input");
@@ -19,7 +19,7 @@ export const prioritySelectEl = document.querySelector(".select__priority");
 export const addButtonEl = document.querySelector(".footer__btn-add");
 export const cancelButtonEl = document.querySelector(".footer__btn-cancel");
 export const spinnerEL = document.querySelector(".spinner");
-export const filterPriorityEL = document.querySelector(".filter__priority");
+export const filterPriorityEl = document.querySelector(".filter__priority");
 export const activeTasksLength = document.querySelector(
 	".active__tasks-length",
 );

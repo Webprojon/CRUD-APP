@@ -16,10 +16,10 @@ import {
 // HELPER FUNCTIONS
 const addOrRemoveActiveClass = (whichone) => {
 	if (whichone === "add") {
-		containerInputsEl.classList.add("container__inputs-active");
+		containerInputsEl.classList.add("footer__inputs-active");
 		return;
 	}
-	containerInputsEl.classList.remove("container__inputs-active");
+	containerInputsEl.classList.remove("footer__inputs-active");
 };
 
 const changingBtnText = (btn) => {
@@ -38,11 +38,9 @@ const changingBtnText = (btn) => {
 	}
 };
 
-// Changing input's border color
 const changeBorderColor = (whichone) => {
 	inputs.forEach((input) => input.classList.add(whichone));
 };
-// HELPER FUNCTIONS
 
 const clickCancelBtnHandler = () => {
 	// After adding task, removing inputs value
