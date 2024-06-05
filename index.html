@@ -52,6 +52,7 @@
 							<th>Tasks</th>
 							<th>Priority</th>
 							<th>Actions</th>
+							<th>Time</th>
 							<th>Date</th>
 						</tr>
 					</thead>
@@ -81,6 +82,12 @@
 						<option value="Middle priority">Middle priority</option>
 						<option value="Low priority">Low priority</option>
 					</select>
+					<select class="select__time">
+						<option value="15">15</option>
+						<option value="25">25</option>
+						<option value="35">35</option>
+						<option value="45">45</option>
+					</select>
 				</div>
 
 				<div class="footer__buttons">
@@ -99,7 +106,7 @@
 
 			<div class="modal__task">
 				<div class="modal-inputs">
-					<div class="wrapper">
+					<div class="modal__wrappper">
 						<input
 							type="text"
 							placeholder="Your name"
@@ -113,12 +120,20 @@
 						</select>
 					</div>
 
-					<input
-						type="text"
-						placeholder="Enter your task"
-						autocomplete="off"
-						class="modal__input-task modal-task-input"
-					/>
+					<div class="modal__wrappper2">
+						<input
+							type="text"
+							placeholder="Enter your task"
+							autocomplete="off"
+							class="modal__input-task modal-task-input"
+						/>
+						<select class="modal__select-time">
+							<option value="15">15</option>
+							<option value="25">25</option>
+							<option value="35">35</option>
+							<option value="45">45</option>
+						</select>
+					</div>
 				</div>
 
 				<div class="modal__btns">

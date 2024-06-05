@@ -9,6 +9,7 @@ import {
 	modalInputTaskEl,
 	modalBtnCancelEl,
 	modalBtnUptadeEl,
+	modalSelectTimeEl,
 } from "../common.js";
 import renderSpinner from "./renderSpinner.js";
 
@@ -50,6 +51,7 @@ const clickModalUpdateBtn = async () => {
 	const modalInputNameValue = modalInputNameEl.value;
 	const modalInputTaskValue = modalInputTaskEl.value;
 	const modalSelectPriorityValue = modalPriorityEl.value;
+	const modalSelectTimeValue = modalSelectTimeEl.value;
 	const taskId = state.taskId;
 
 	// Collect the updated task details
@@ -58,6 +60,7 @@ const clickModalUpdateBtn = async () => {
 		member: modalInputNameValue,
 		task: modalInputTaskValue,
 		priority: modalSelectPriorityValue,
+		timer: modalSelectTimeValue,
 	};
 
 	// PUT method

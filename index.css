@@ -242,11 +242,11 @@ tbody tr:last-child {
 }
 
 .name__input {
-	width: 250px;
+	width: 210px;
 }
 
 .task__input {
-	width: 400px;
+	width: 320px;
 }
 
 .footer__buttons {
@@ -320,9 +320,8 @@ tbody tr:last-child {
 	flex-direction: column;
 }
 
-.wrapper {
+.modal__wrappper {
 	display: flex;
-	width: inherit;
 	justify-content: space-between;
 }
 
@@ -330,12 +329,21 @@ tbody tr:last-child {
 	width: 48%;
 }
 
-.modal__input-task {
-	width: 100%;
-}
-
 .modal__select-priority {
 	width: 48%;
+}
+
+.modal__wrappper2 {
+	display: flex;
+	justify-content: space-between;
+}
+
+.modal__input-task {
+	width: 76%;
+}
+
+.modal__select-time {
+	width: 20%;
 }
 
 .modal__btns {

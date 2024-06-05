@@ -10,9 +10,16 @@ import renderSpinner from "./renderSpinner.js";
 
 // VARIABLES
 let FILTEREDTASKS;
+let PRIORITYVALUE = "All priority";
+
+const filterTasks = (whichPriority) => {
+	FILTEREDTASKS = state.tasksList.filter(
+		(task) => task.priority === whichPriority,
+	);
+};
 
 filterPriorityEl.addEventListener("change", (event) => {
-	state.priorityValue = event.target.value;
+	console.log(event.target.value);
 });
 
 const renderTasks = async () => {
@@ -31,28 +38,19 @@ const renderTasks = async () => {
 		const tasks = (state.tasksList = data);
 
 		// Filter data besed on selecter
-		switch (state.priorityValue) {
+		switch (PRIORITYVALUE) {
 			case "High priority":
-				FILTEREDTASKS = tasks.filter(
-					(task) => task.priority === "High priority",
-				);
+				filterTasks("High priority");
 				break;
 			case "Middle priority":
-				FILTEREDTASKS = tasks.filter(
-					(task) => task.priority === "Middle priority",
-				);
+				filterTasks("Middle priority");
 				break;
 			case "Low priority":
-				FILTEREDTASKS = tasks.filter(
-					(task) => task.priority === "Low priority",
-				);
+				filterTasks("Low priority");
 				break;
 			default:
-				FILTEREDTASKS = tasks;
+				FILTEREDTASKS = state.tasksList;
 		}
-
-		//console.log(filterPriorityEL.value);
-		console.log(tasks);
 
 		// Display active tasks length
 		activeTasksLength.textContent = FILTEREDTASKS.length;

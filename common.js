@@ -1,24 +1,22 @@
 // CONSTANTS
 export const BASE_API_URL = "https://mydailytasks.vercel.app";
 
-// STATE
-export const state = {
-	tasksList: [],
-	taskId: 0,
-	priorityValue: "All priority",
-};
-
 // SELECTORS
 export const containerTasks = document.querySelector(".container__tasks");
 export const taskTableBodyEl = document.querySelector(".table__tbody");
 export const containerInputsEl = document.querySelector(".footer__inputs");
+
 export const inputs = document.querySelectorAll(".task-input");
 export const nameInputEl = document.querySelector(".name__input");
 export const taskInputEl = document.querySelector(".task__input");
 export const prioritySelectEl = document.querySelector(".select__priority");
+export const timerSelectEl = document.querySelector(".select__time");
+
 export const addButtonEl = document.querySelector(".footer__btn-add");
 export const cancelButtonEl = document.querySelector(".footer__btn-cancel");
+
 export const spinnerEL = document.querySelector(".spinner");
+
 export const filterPriorityEl = document.querySelector(".filter__priority");
 export const activeTasksLength = document.querySelector(
 	".active__tasks-length",
@@ -26,13 +24,22 @@ export const activeTasksLength = document.querySelector(
 
 export const modalOverlayEl = document.querySelector(".modal__bg-overlay");
 export const modalContainerEl = document.querySelector(".modal__task");
+
 export const modalInputNameEl = document.querySelector(".modal__input-name");
 export const modalInputTaskEl = document.querySelector(".modal__input-task");
-export const modalBtnCancelEl = document.querySelector(".modal__cancel-btn");
-export const modalBtnUptadeEl = document.querySelector(".modal__update-btn");
+export const modalSelectTimeEl = document.querySelector(".modal__select-time");
 export const modalPriorityEl = document.querySelector(
 	".modal__select-priority",
 );
+
+export const modalBtnCancelEl = document.querySelector(".modal__cancel-btn");
+export const modalBtnUptadeEl = document.querySelector(".modal__update-btn");
+
+// STATE
+export const state = {
+	tasksList: [],
+	taskId: 0,
+};
 
 // HELPER / UTILITY FUNCTIONS
 export const createMarkupOfTask = (task) => {
@@ -56,6 +63,7 @@ export const createMarkupOfTask = (task) => {
 								 <button class="task__edit-icon icon" data-task-id="${task.id}"><i class="fa-regular fa-pen-to-square"></i></button>
 								 <button class="task__bin-icon icon" data-task-id="${task.id}"><i class="fa-solid fa-trash-can"></i></button>
 								 </td>
+								 <td class="task__timer">${task.timer} min left</td>
 							<td>${task.date}</td>
 						</tr>
 			`;
