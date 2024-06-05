@@ -5,7 +5,6 @@ import {
 	taskInputEl,
 	addButtonEl,
 	BASE_API_URL,
-	timerSelectEl,
 	containerTasks,
 	cancelButtonEl,
 	activeTasksLength,
@@ -70,7 +69,6 @@ const clickAddBtnHandler = async () => {
 	const nameInputElValue = nameInputEl.value;
 	const taskInputElValue = taskInputEl.value;
 	const prioritySelectElValue = prioritySelectEl.value;
-	const timeSelectElValue = timerSelectEl.value;
 
 	if (addBtnText === "save task") {
 		// Update tasks length

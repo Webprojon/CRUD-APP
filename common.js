@@ -10,7 +10,6 @@ export const inputs = document.querySelectorAll(".task-input");
 export const nameInputEl = document.querySelector(".name__input");
 export const taskInputEl = document.querySelector(".task__input");
 export const prioritySelectEl = document.querySelector(".select__priority");
-export const timerSelectEl = document.querySelector(".select__time");
 
 export const addButtonEl = document.querySelector(".footer__btn-add");
 export const cancelButtonEl = document.querySelector(".footer__btn-cancel");
@@ -27,7 +26,6 @@ export const modalContainerEl = document.querySelector(".modal__task");
 
 export const modalInputNameEl = document.querySelector(".modal__input-name");
 export const modalInputTaskEl = document.querySelector(".modal__input-task");
-export const modalSelectTimeEl = document.querySelector(".modal__select-time");
 export const modalPriorityEl = document.querySelector(
 	".modal__select-priority",
 );
@@ -63,7 +61,6 @@ export const createMarkupOfTask = (task) => {
 								 <button class="task__edit-icon icon" data-task-id="${task.id}"><i class="fa-regular fa-pen-to-square"></i></button>
 								 <button class="task__bin-icon icon" data-task-id="${task.id}"><i class="fa-solid fa-trash-can"></i></button>
 								 </td>
-								 <td class="task__timer">${task.timer} min left</td>
 							<td>${task.date}</td>
 						</tr>
 			`;
